@@ -2,7 +2,6 @@
 import measures
 
 import matplotlib.pyplot as plt
-from PIL import Image
 import os, os.path
 import time
 import keras
@@ -129,33 +128,3 @@ def load_swag_results(network):
     y_test = x['y_test']
 
     save_data('SWAG', network, y_pred, y_test)
-
-"""**Loads a few images from the oral dataset.**"""
-def load_real_data():
-    imgs = []
-    num_classes = 2
-    path = "/content/drive/My Drive/OralCancer_DataSet3"
-    path1 = "/train/Healthy"
-    path2 = "/train/Cancer"
-    path3 = "/test/Healthy"
-    path4 = "/test/Cancer"
-    paths = [path+path1, path+path2, path+path3, path+path4]
-    valid_images = [".jpg", ".jpeg"]
-    for i in range(4):
-        path = paths[i]
-        for f in os.listdir(path):
-            ext = os.path.splitext(f)[1]
-        if ext.lower() not in valid_images:
-            continue
-        imgs.append((Image.open(os.path.join(path,f)))) #Append and convert to numpy array
-    imgs = np.stack(imgs, axis=0)
-    x_train = imgs[0:20,...]/255.0 #Normalize image and split into train and test
-    x_test = imgs[20:,...]/255.0
-    y_train = np.concatenate([np.zeros(10), np.ones(10)], axis=0) #0 is healthy, 1 is malicious
-    y_train = keras_utils.to_categorical(y_train, num_classes=2)
-    y_test = y_train
-
-    W = x_train.shape[1] #Width of image in pixels
-    H = x_train.shape[2] #Height 
-    D = x_train.shape[3] #Height 
-    return x_train, x_test, y_train, y_test, num_classes, H, W, D
