@@ -5,7 +5,7 @@ The dependencies necessary to run the code are listed in the file _requirements.
 
 To run the code specify the desired network, dataset and method to apply to the file _runme.py_. See the following example:
 ```
-python runme.py --network=vgg16 --dataset=mnist --method=baseline
+python runme.py --network vgg16 --dataset mnist --method baseline
 ```
 
 The available networks are the following:
