@@ -52,7 +52,7 @@ def parse_arguments():
 
 """**Definition that creates and compiles the selected network. Specify train size etc.**"""
 def run_model(network, dataset, method):  
-  if dataset not in ['mnist', 'oral']:
+  if dataset not in ['mnist']:
     raise Exception('Dataset not available')
   if method in ['baseline', 'temp_scale']:
     if network not in ['lenet', 'vgg16', 'resnet']:
