@@ -1,7 +1,7 @@
 # Estimating Certainty of Deep Learning
 This repository contains the code for our project "Estimating Certainty of Deep Learning". 
 
-The dependencies necessary to run the code are listed in the file requirements.txt.
+The dependencies necessary to run the code are listed in the file _requirements.txt_.
 
 To run the code specify the desired network, dataset and method to apply to the file runme.py. See the following example:
 ```
@@ -31,6 +31,7 @@ To apply SWAG to a network first create the following directories:
 
 Specify the training and test size and preprocess the data by running the file preprocess_data.py. See the following example:
 ```
+cd SWAG
 python preprocess_data.py --save_path data_processed --data_set MNIST --train_size 5000 --test_size 40000 
 ```
 
