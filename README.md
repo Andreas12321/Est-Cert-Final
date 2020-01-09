@@ -25,7 +25,7 @@ The calibration methods that can be applied to the networks are:
 
 To apply SWAG to a network first create the following directories: 
 - plots
-- weights. 
+- weights
 
 Specify the training and test size and preprocess the data by running the file swag_preprocess_data.py_. See the following example:
 ```
