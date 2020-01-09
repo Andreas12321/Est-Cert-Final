@@ -2,12 +2,12 @@
 import utils
 import keras
 from keras.layers import (Conv2D, BatchNormalization, MaxPool2D, Dense, Dropout, Flatten)
-
+from keras.applications.resnet50 import ResNet50
 
 """**Definition of ResNet-50**"""
 def resnet_model(input_shape, num_classes):
     resnet = keras.Sequential()
-    resnet.add(keras.applications.resnet.ResNet50(include_top=False, weights= None, input_tensor=None, input_shape = input_shape, pooling='max', classes=num_classes))
+    resnet.add(ResNet50(include_top=False, weights= None, input_tensor=None, input_shape = input_shape, pooling='max', classes=num_classes))
     resnet.add(Dense(num_classes, activation = 'softmax'))
     return resnet
 
