@@ -31,7 +31,7 @@ To apply SWAG to a network first create the following directories:
 
 Specify the training and test size and preprocess the data by running the file swag_preprocess_data.py_. See the following example:
 ```
-python preprocess_data.py --save_path data_processed --data_set MNIST --train_size 5000 --test_size 40000 
+python swag_preprocess_data.py --save_path data_processed --data_set MNIST --train_size 5000 --test_size 40000 
 ```
 
 To train and test a network specify the hyperparameters and run the files _train_swag.py_ and _test_swag.py_. See the following example. 
