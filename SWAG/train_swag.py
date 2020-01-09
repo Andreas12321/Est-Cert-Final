@@ -215,12 +215,6 @@ if __name__ == "__main__":
 
             n_SWAG += 1
 
-        # Storing validation data for plotting
-            x_train, y_train = utils.shuffle_data(x_train, y_train)
-            tr_loss, tr_acc = sess.run([loss, accuracy], feed_dict={x_input: x_batch, y_input: y_batch})
-            training_loss.append(tr_loss)
-            training_acc.append(tr_acc)
-
         # Save all variables of the TensorFlow graph to a checkpoint after a certain number of epochs.
         if ((epoch + 1) % CHECKPOINT_INTERVAL == 0) and args.save_checkpoint_path is not None:
             checkpoint.save(sess, save_path=save_path, global_step=epoch)
