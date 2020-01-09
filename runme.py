@@ -28,7 +28,6 @@ from keras.layers import (Conv2D, BatchNormalization, MaxPool2D, Dense, Dropout,
 from keras.models import (Model, Sequential)
 import sklearn.metrics as sk_met
 
-from PIL import Image
 import os, os.path
 import time
 import argparse
