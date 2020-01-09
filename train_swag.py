@@ -13,8 +13,8 @@ import os
 import matplotlib.pyplot as plt
 
 import utils
-from networks.vgg16 import VGG16
-from networks.lenet import lenet
+from swag_networks.vgg16 import VGG16
+from swag_networks.lenet import lenet
 from keras import optimizers
 
 from tensorflow.compat.v1 import ConfigProto
@@ -81,7 +81,6 @@ def plot_cost(c_v, c_t, save_plots_path):
     plt.xlabel("Epoch")
     plt.ylabel("Loss")
     plt.savefig(save_plots_path + "swag_loss_plot.png")
-
 
 def plot_acc(acc_t, save_plots_path):
     """

@@ -128,3 +128,36 @@ def load_swag_results(network):
     y_test = x['y_test']
 
     save_data('SWAG', network, y_pred, y_test)
+
+"""**Defines piece-wise constant learning rate schedule for SWAG. **"""
+def schedule(num_epochs, num_train_sample, batch_size, swa_start,  swa_lr, lr_init = 0.01, swa = True): #Default value of lr_init & swa_lr from original implementation
+    num_batches = num_train_sample // batch_size
+    learning_rate_vector = []
+    calls = num_epochs * num_batches
+    if calls == 0:
+        raise Exception('Not enough data.')
+    for call in range(1,calls+1):
+        epoch = ceildiv(call, num_batches)
+        learning_rate_vector.append(calc_learn_rate(epoch, swa = swa, swa_start= swa_start, swa_lr = swa_lr, lr_init = lr_init))
+    
+    #Get the unique values and indices from the lr_vector
+    unique_vector, indices = np.unique(learning_rate_vector, return_index=True)
+    indices = indices[1:] #Remove the 0
+    
+    return unique_vector.tolist(), indices.tolist()
+
+"""**Calsulates learning rate.**"""
+def calc_learn_rate(epoch, swa, swa_start, swa_lr, lr_init):
+    t = (epoch) / (swa_start if swa else epochs)
+    lr_ratio = swa_lr / lr_init if swa else lr_init
+    if t <= 0.5:
+        factor = 1.0
+    elif t <= 0.9:
+        factor = 1.0 - (1.0 - lr_ratio) * (t - 0.5) / 0.4
+    else:
+        factor = lr_ratio
+    return lr_init * factor
+
+
+def ceildiv(a,b):
+    return -(-a//b)
