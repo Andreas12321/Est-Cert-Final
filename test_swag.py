@@ -16,8 +16,8 @@ from sklearn.metrics import accuracy_score, log_loss
 from tqdm import tqdm
 
 import utils
-from networks.vgg16 import VGG16
-from networks.lenet import lenet
+from swag_networks.vgg16 import VGG16
+from swag_networks.lenet import lenet
 
 from tensorflow.compat.v1 import ConfigProto
 from tensorflow.compat.v1 import InteractiveSession
