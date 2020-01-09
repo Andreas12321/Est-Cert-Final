@@ -5,7 +5,7 @@ The dependencies necessary to run the code are listed in the file _requirements.
 
 To run the code specify the desired network, dataset and method to apply to the file _runme.py_. See the following example:
 ```
-python runme.py --network=vgg16 --dataset=mnist --method=baseline
+python runme.py --network vgg16 --dataset mnist --method baseline
 ```
 
 The available networks are the following:
@@ -24,8 +24,6 @@ The calibration methods that can be applied to the networks are:
 - Ensemble methods (ensemble)
 
 To apply SWAG to a network first create the following directories: 
-- data_processed
-- networks
 - plots
 - weights. 
 
@@ -42,6 +40,6 @@ python test_swag.py --data_path data_processed/ --load_param_file weights/swag_p
 
 To create the reliability diagrams specify the desired network and run the file plot.py. See the following example:
 ```
-python plot.py --network=vgg16
+python plot.py --network vgg16
 ```
 
