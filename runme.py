@@ -58,9 +58,9 @@ def run_model(network, dataset, method):
     if network not in ['lenet', 'vgg16', 'resnet']:
       raise Exception('Unimplemented network')
     y_pred, y_test = globals()[network](dataset)
-    if method is 'temp_scale':
+    if method == 'temp_scale':
       y_pred, temp = methods.run_temp_scale(y_pred, y_test)
-  elif method is 'ensemble':
+  elif method == 'ensemble':
     if network not in ['lenet', 'vgg16', 'resnet', 'MLP']:
       raise Exception('Unimplemented network')
     y_pred, y_test = methods.ensemble(network, dataset)
