@@ -3,7 +3,7 @@ This repository contains the code for our project "Estimating Certainty of Deep 
 
 The dependencies necessary to run the code are listed in the file requirements.txt.
 
-To run the code input the desired network, dataset and method to apply to the file runme.py. See the following example:
+To run the code specify the desired network, dataset and method to apply to the file runme.py. See the following example:
 ```
 python runme.py --network=vgg16 --dataset=mnist --method=baseline
 ```
