@@ -40,6 +40,6 @@ python test_swag.py --data_path data_processed/ --load_param_file weights/swag_p
 
 To create the reliability diagrams specify the desired network and run the file plot.py. See the following example:
 ```
-python plot.py --network=vgg16
+python plot.py --network vgg16
 ```
 
