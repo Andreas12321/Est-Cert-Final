@@ -24,8 +24,7 @@ The calibration methods that can be applied to the networks are:
 - Ensemble methods (ensemble)
 
 To apply SWAG to a network first create the following directories: 
-- data_processed
-- networks
+- data_processed (skapas denna själv?)
 - plots
 - weights. 
 
