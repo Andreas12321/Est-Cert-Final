@@ -29,7 +29,7 @@ To apply SWAG to a network first create the following directories:
 - plots
 - weights. 
 
-Specify the training and test size and preprocess the data by running the file _preprocess_data.py_. See the following example:
+Specify the training and test size and preprocess the data by running the file swag_preprocess_data.py_. See the following example:
 ```
 python preprocess_data.py --save_path data_processed --data_set MNIST --train_size 5000 --test_size 40000 
 ```
