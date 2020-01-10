@@ -45,6 +45,9 @@ python plot.py --network vgg16
 
 ## References:
 ### Original Papers:
+- Chuan Guo et al. “On Calibration of Modern Neural Networks”. In:CoRRabs/1706.04599 (2017). arXiv:1706. 04599. url: http://arxiv.org/abs/1706.04599.
+- Balaji  Lakshminarayanan,  Alexander  Pritzel,  and  Charles  Blundell.“Simple  and  Scalable  Predictive  Uncertainty  Estimation  using  DeepEnsembles”.  In:Advances  in  Neural  Information  Processing  Systems30.  Ed.  by  I.  Guyon  et  al.  Curran  Associates,  Inc.,  2017,  pp.  6402–6413.url:http://papers.nips.cc/paper/7219-simple-and-scalable-predictive-uncertainty-estimation-using-deep-ensembles.pdf.
+- Wesley Maddox et al. “A Simple Baseline for Bayesian Uncertainty inDeep Learning”. In:arXiv preprint arXiv:1902.02476(2019).
 
 ### Implementations:
 - https://github.com/timgaripov/swa/
