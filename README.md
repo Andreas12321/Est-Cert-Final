@@ -43,6 +43,9 @@ To create the reliability diagrams specify the desired network and run the file 
 python plot.py --network vgg16
 ```
 
-**References:**
+## References:
+### Original Papers:
+
+### Implementations:
 - https://github.com/timgaripov/swa/
 - https://github.com/DD2412-Final-Projects/swag-reproduced/tree/authors-config
